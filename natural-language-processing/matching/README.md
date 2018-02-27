@@ -62,24 +62,28 @@ phraseRecognizer has a couple of arguments:
 Args: list of phrases to match, entity label, redesignate label with custom label
 Returns: phrase matcher object
         
-Use: 
-
-labels attach an entity type to matched phrases. However these entities must adhere to spaCy's entity types.
+Use: labels attach an entity type to matched phrases. However these entities must adhere to spaCy's entity types.
 You can designate your own label with mylabel, this simply creates a look-up table. 
-             
-```python termMatcher``` ignore entity types; therefore this argument can be ignored. However ```python spanMatcher``` will return entity type.
+
+```termMatcher``` ignore entity types; therefore this argument can be ignored. However ```spanMatcher``` will return entity type.
         
 Simply match all phrases:
 
-```python pr = phraseRecognizer(mylist)```
+```python 
+pr = phraseRecognizer(mylist)
+```
              
 Match all phrases or return phrases with entity type 'PERSON'  
 
-```python pr = phraseRecognizer(naruto, label='PERSON')```
+```python 
+pr = phraseRecognizer(naruto, label='PERSON')
+```
         
 Match all phrases and designate entity type 'PERSON' as 'ANIME'
 
-```python pr = phraseRecognizer(naruto, label='PERSON',mylabel='ANIME')```
+```python 
+pr = phraseRecognizer(naruto, label='PERSON',mylabel='ANIME')
+```
 
 
 Example:
